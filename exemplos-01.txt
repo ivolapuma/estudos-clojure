@@ -1,0 +1,53 @@
+// exemplos de funcoes
+
+[]   // simbolo para definir uma lista (vetor)
+()   // simbolo para invocar uma funcao (1o elemento é o nome da funcao)
+10   // Long 
+10.0 // Double
+10N  // BigInt
+10M  // BigDecimal
+
+(println "ola clojure") // println imprime na tela
+(count [1 2 3])         // count conta quantidade de elementos
+(conj ["A" "B"] "C")    // conj inclui um elemento e devolve uma outra lista com todos os elementos
+(class 90N)             // class retorna qual a classe do elemento)
+
+(def simbolo 10) // def define valor de simbolo
+(defn f [x] (* 2 x)) // defn define uma funcao
+
+(defn imprime-mensagem []
+  (println "---------------------")
+  (println "Bem-vind@ ao estoque!"))
+
+(defn aplica-desconto [valor-bruto]
+  (* valor-bruto 0.9))
+
+(defn valor-descontado 
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (* valor-bruto (- 1 0.1))
+)
+
+(defn valor-descontado 
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (def desconto 0.1)
+  (* valor-bruto (- 1 desconto))
+)
+
+(defn valor-descontado 
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (let [desconto 0.1]
+    (println "Calculando desconto de" desconto)
+    (* valor-bruto (- 1 desconto)))
+)
+
+(defn valor-descontado 
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (let [desconto (/ 10 100)]
+    (println "Calculando desconto de" desconto)
+    (* valor-bruto (- 1 desconto)))
+)
+  
