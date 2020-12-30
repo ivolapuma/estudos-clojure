@@ -60,7 +60,7 @@
 ; versao redefinida que recebe funcao como parametro
 (defn valor-descontado
   "Retorna o valor com desconto de 10% se deve aplicar o desconto."
-  [ aplica? valor-bruto]
+  [aplica? valor-bruto]
   (if (aplica? valor-bruto)
     (let [percentual-desconto (/ 10 100)
           valor-desconto (* valor-bruto percentual-desconto)]
