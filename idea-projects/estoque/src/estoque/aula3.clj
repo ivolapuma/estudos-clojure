@@ -71,20 +71,21 @@
 (println (valor-descontado mais-caro-que-100? 900))
 (println (valor-descontado mais-caro-que-100? 90))
 
-; HIGHER ORDER FUNCTIONS
+; HIGHER ORDER FUNCTIONS: sao funcoes que recebem ou retornam outras funcoes
 ; IMUTABILIDADE
 
-(println "recebe funcao sem nome ou anonima (lambda)")
+(println "recebe funcao sem nome ou anonima")
 (println (valor-descontado (fn [valor] (> valor 100)) 900))
 (println (valor-descontado (fn [valor] (> valor 100)) 90))
 (println (valor-descontado (fn [v] (> v 100)) 900))
 (println (valor-descontado (fn [v] (> v 100)) 90))
+(println "recebe funcao lambda")
 (println (valor-descontado #(> %1 100) 900))
 (println (valor-descontado #(> %1 100) 90))
 (println (valor-descontado #(> % 100) 900))
 (println (valor-descontado #(> % 100) 90))
 
-; quanto menos caracteres, mais simples, porem mais ambiguo (menos legivel)
+; uanto menos caracteres, mais simples, porem mais ambiguo (menos legivel)
 
 ; outra forma de definir uma funcao
 (def mais-caro-que-100? #(> % 100))
