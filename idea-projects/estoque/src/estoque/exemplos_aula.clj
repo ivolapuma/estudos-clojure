@@ -26,45 +26,45 @@
 (defn aplica-desconto [valor-bruto]
   (* valor-bruto 0.9))
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (* valor-bruto (- 1 0.1))
-)
+  )
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (def desconto 0.1)
   (* valor-bruto (- 1 desconto))
-)
+  )
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (let [desconto 0.1]
     (println "Calculando desconto de" desconto)
     (* valor-bruto (- 1 desconto)))
-)
+  )
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (let [desconto (/ 10 100)]
     (println "Calculando desconto de" desconto)
     (* valor-bruto (- 1 desconto)))
-)
+  )
 
 ; // 02 let multiplo e condicionais
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (let [percentual-desconto (/ 10 100)
-        valor-desconto      (* valor-bruto percentual-desconto)]
+        valor-desconto (* valor-bruto percentual-desconto)]
     (println "Calculando desconto de" valor-desconto)
     (- valor-bruto valor-desconto))
-)
+  )
 
 ; assim como operacoes sao funcoes:
 (+ 10 20)
@@ -85,7 +85,7 @@
   (println "maior")
   (println "menor ou igual"))
 
-(defn valor-descontado 
+(defn valor-descontado
   "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100."
   [valor-bruto]
   (if (> valor-bruto 100)
@@ -94,8 +94,10 @@
       (println "Calculando desconto de" valor-desconto)
       (- valor-bruto valor-desconto))
     valor-bruto
+    )
   )
-)
+
+(println (valor-descontado 500))
 
 ; // BigInt e BigDecimal
 
